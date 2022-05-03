@@ -17,6 +17,8 @@ services:
     container_name: domcord-web
     build:
       context: .
+      args:
+        DOMCORD_LICENSE_KEY: ${DOMCORD_LICENSE_KEY}
     depends_on:
       - db
     ports:
